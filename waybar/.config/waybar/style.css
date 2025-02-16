@@ -1,5 +1,5 @@
 @define-color dark-grey rgba(20, 20, 20, 0.6);
-@define-color purple rgb(146, 131, 199); 
+@define-color accent_1 #d17a89; 
 @define-color white #ffffff;
 
 * {
@@ -11,7 +11,7 @@ window#waybar {
   background: rgba(20, 20, 20, 0.5);
   margin: 10px;
   padding: 8px;
-  border-bottom: 2px solid @purple;
+  border-bottom: 2px solid @accent_1;
   color: #ffffff;
   transition: all 0.3s ease-in-out;
 }
@@ -23,12 +23,12 @@ window#waybar:hover {
 #workspaces button {
   padding: 6px;
   margin: 3px;
-  border-radius: 4px;
+  border-radius: 25%;
   transition: all 0.2s;
 }
 
 #workspaces button.active {
-  background: @purple;
+  background: @accent_1;
   color: white;
   font-weight: bold;
 }
@@ -36,6 +36,11 @@ window#waybar:hover {
 #clock {
   font-size: 16px;
   font-weight: bold;
+  opacity: .7;	
+}
+
+#clock:hover {
+	opacity: 1;
 }
 
 #network,
