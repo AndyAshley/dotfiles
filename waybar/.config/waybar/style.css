@@ -1,6 +1,6 @@
 @define-color dark-grey rgba(20, 20, 20, 0.6);
-@define-color accent_1 #d17a89; 
-@define-color white #ffffff;
+@define-color accent_1 #471F53; 
+@define-color white #FFFFFF;
 
 * {
   font-family: "JetBrainsMono Nerd Font", sans-serif;
@@ -9,8 +9,6 @@
 
 window#waybar {
   background: rgba(20, 20, 20, 0.5);
-  margin: 10px;
-  padding: 8px;
   border-bottom: 2px solid @accent_1;
   color: #ffffff;
   transition: all 0.3s ease-in-out;
@@ -29,23 +27,15 @@ button {
 button:hover {
     background: inherit;
     color: @accent_1;
-    border-top: 2px solid @accent_1;
-}
-
-#workspaces button {
-    padding: 0 4px;
 }
 
 #workspaces button.focused {
     background-color: rgba(0, 0, 0, 0.3);
-    color: @rosewater;
-    border-top: 2px solid @rosewater;
 }
 
 #workspaces button.active {
-    background-color: rgba(0, 0, 0, 0.3);
-    color: @accent_1;
-    border-top: 2px solid @accent_1;
+    background-color: @accent_1;
+    color: @white;
 }
 
 #workspaces button.urgent { 
@@ -67,6 +57,12 @@ button:hover {
 #cpu,
 #memory,
 #battery {
-  padding: 0 10px; /* Add spacing between modules */
+  margin-top: 2px;
+  margin-bottom: 8px;
+  margin-left: 4px;
+  margin-right: 4px;
+  padding-left: 4px;
+  padding-right: 4px;  
+  border-bottom: 2px solid red;
 }
 

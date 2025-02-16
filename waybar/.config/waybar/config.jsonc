@@ -1,10 +1,10 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 44,
+  "height": 40,
   "modules-left": ["hyprland/workspaces", "hyprland/window"],
   "modules-center": ["clock"],
-  "modules-right": ["swaync", "network", "pulseaudio", "cpu", "memory"],
+  "modules-right": ["network", "pulseaudio", "cpu", "memory"],
   
   "clock": {
     "format": "<span foreground='#f5c2e7'>   </span>{:%a %d %H:%M}",
@@ -23,13 +23,15 @@
 
   "network": {
     "format-wifi": "<span size='13000' foreground='#f5e0dc'>  </span>{essid}",
-    "format-ethernet": "<span size='13000' foreground='#f5e0dc'>󰤭  </span> Disconnected",
+    "format-ethernet": "<span size='13000' foreground='#f5e0dc'>󰈀 </span> Ethernet",
+    "tooltip-format-ethernet": "Interface: {ifname}\nIP: {ipaddr}",
     "format-linked": "{ifname} (No IP) 󰲐",
-    "format-disconnected": "<span size='13000' foreground='#f5e0dc'>  </span>Disconnected",
-    "tooltip-format-wifi": "Signal Strenght: {signalStrength}%"
+    "format-disconnected": "<span size='13000' foreground='#f5e0dc'> </span>Disconnected",
+    "tooltip-format-wifi": "Signal Strenght: {signalStrength}%",
+    "on-click": "nm-connection-editor"
   },
   "pulseaudio": {
-      "format": "{icon}  {volume}%",
+      "format": "{icon} {volume}%",
       "format-muted": "",
       "format-icons": {
           "default": ["", "", " "]
