@@ -1,0 +1,41 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 44,
+  "modules-left": ["hyprland/workspaces", "hyprland/window"],
+  "modules-center": ["clock"],
+  "modules-right": ["swaync", "network", "pulseaudio", "cpu", "memory"],
+  
+  "clock": {
+    "format": "<span foreground='#f5c2e7'>   </span>{:%a %d %H:%M}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+  
+  "cpu": {
+    "format": "  {usage}%",
+    "tooltip": false
+  },
+
+  "memory": {
+    "format": "  {used}MB",
+    "tooltip": false
+  },
+
+  "network": {
+    "format": "  {ifname}",
+    "format-wired": " {ifname}",
+    "tooltip": false
+  },
+
+  "pulseaudio": {
+    "format": "  {volume}%",
+    "tooltip": false
+  },
+
+  "tray": {
+    "icon-size": 20,
+    "spacing": 10
+  }
+}
+
+
