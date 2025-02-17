@@ -1,6 +1,12 @@
 -- Set leader key
 vim.g.mapleader = " "
 
+-- Tab settings
+vim.opt.tabstop = 4        -- Number of spaces a tab counts for
+vim.opt.shiftwidth = 4     -- Number of spaces for indentation
+vim.opt.expandtab = true   -- Converts tabs to spaces
+vim.opt.softtabstop = 4    -- Makes backspacing behave more predictably
+
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
