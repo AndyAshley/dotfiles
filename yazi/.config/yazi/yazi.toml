@@ -1,2 +1,17 @@
+[manager]
+ratio = [2,3,3]
+show_hidden = true
+
+[opener]
+play = [
+	{ run = 'mpv "$@"', orphan = true, for = "unix" },
+]
+edit = [
+	{ run = 'nvim "$@"', block = true, for = "unix" },
+]
+open = [
+	{ run = 'nvim "$@"', desc = "Open" },
+]
+
 [flavor]
 use = "everforest-medium"

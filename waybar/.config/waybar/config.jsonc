@@ -2,9 +2,10 @@
   "layer": "top",
   "position": "top",
   "height": 40,
-  "modules-left": ["hyprland/workspaces", "hyprland/window"],
+  "width": 3500,
+  "modules-left": ["hyprland/workspaces"],
   "modules-center": ["clock"],
-  "modules-right": ["network", "pulseaudio", "cpu", "memory"],
+  "modules-right": ["network", "pulseaudio", "cpu", "memory", "custom/power"],
   
   "clock": {
     "format": "<span foreground='#f5c2e7'>   </span>{:%A %B %d, %Y | %I:%M %p}",
@@ -36,10 +37,21 @@
       "format-icons": {
           "default": ["", "", " "]
       },
-      "on-click": "pavucontrol"
+      "on-click": "pavucontrol-qt"
+  },
+  "custom/power": {
+      "format": "󰐥",
+      "tooltip": false,
+	  "menu": "on-click",
+	  "menu-file": "$HOME/.config/waybar/power_menu.xml",
+	  "menu-actions": {
+		  "shutdown": "shutdown",
+      "lock": "hyprlock",
+		  "reboot": "reboot",
+		  "suspend": "setsid hyprlock & sleep 0.5 && systemctl suspend"
+		}
   },
   "tray": {
-    "icon-size": 20,
     "spacing": 10
   }
 }
